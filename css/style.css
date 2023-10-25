@@ -80,8 +80,6 @@ h6 {
 
 .lock body {
   overflow: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
 }
 
 .wrapper {
@@ -3364,14 +3362,14 @@ h3::before {
   background: transparent;
 }
 
-.spollers__title span:nth-child(1) {
+.spollers__title-text {
   padding: 0.3125rem 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
-.spollers__title span:nth-child(2) {
+.spollers__title-icon {
   margin-left: 0.625rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -3396,20 +3394,20 @@ h3::before {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.spollers__title span:nth-child(2) svg {
+.spollers__title-icon svg {
   width: 0.875rem;
   height: 0.5rem;
   color: #FBDC51;
   margin-top: 0.25rem;
 }
 
-.spollers__title._spoller-active span:nth-child(2) {
+.spollers__title._spoller-active .spollers__title-icon {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 
-.spollers__title._spoller-active span:nth-child(2) svg {
+.spollers__title._spoller-active .spollers__title-icon svg {
   margin-top: 0.0625rem;
 }
 
@@ -5182,12 +5180,19 @@ button.swiper-pagination-bullet {
     border-radius: 6.25rem;
   }
 
+  #case .popup__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   #case .popup__text-block {
     padding: 0;
+    margin-bottom: 1.875rem;
   }
 
   #case .popup__image-block {
-    max-width: 31.25rem;
     margin-bottom: 1.25rem;
   }
 
@@ -5468,16 +5473,16 @@ button.swiper-pagination-bullet {
     padding: 1.5rem 1.5rem;
   }
 
-  .spollers__title p {
+  .spollers__title-text {
     padding: 0;
   }
 
-  .spollers__title span {
+  .spollers__title-icon {
     width: 1.5rem;
     height: 1.5rem;
   }
 
-  .spollers__title span svg {
+  .spollers__title-icon svg {
     width: 0.625rem;
     height: 0.375rem;
   }
